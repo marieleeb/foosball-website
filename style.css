@@ -1,0 +1,160 @@
+body{
+    font-family: "Verdana", "Arial", sans-serif;
+    font-size: 16px;
+    background-color: black;
+}
+
+#logo{
+    width: 100px;
+}
+
+/* Dashboard */
+.outer-grid{
+    display: grid;
+    padding: 0px 40px 40px 40px;
+    grid-template-areas:
+   'top top top leadBoard'
+   'noise goalStreak goalRecord leadBoard'
+   'gamePlayed busyTime busyTime leadBoard';
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+    height: 70%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+p{
+    text-align: center;
+}
+
+/* Scoreboard */
+.inner-grid{
+    grid-area: top;
+    display: grid;
+    grid-template-areas:
+    '. . time . .'
+    'r numR time numB b';
+    grid-template-columns: 35% 5% 20% 5% 35%;
+    grid-template-rows: 50% 50%;
+}
+
+.scoreBoard{
+    background-color: #D0D0CE;  
+    font-family: "Verdana", "Geneva", sans-serif;
+    font-size: 100%;
+    color: #000000;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+
+#timeRem{
+    grid-area: time;
+    text-align: center;
+}
+
+.scores{
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.num{
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Right Side of Scoreboard */
+#blueTeam{
+    grid-area: b;
+    margin-left: -100px;
+}
+#scoreBlue{
+    grid-area: numB;
+    background-color: #62B5E5;
+    border: 5px solid #A0DCFF;
+    height: 60%;
+    align-self: center;
+    line-height: 180%;
+}
+
+#blueName{
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Left Side of Scoreboard */
+#redTeam{
+    grid-area: r;
+    margin-right: -100px;
+}
+#scoreRed{
+    grid-area: numR;
+    background-color: #DA291C;
+    border: 5px solid #FF5D51;
+    height: 60%;
+    align-self: center;
+    line-height: 180%;
+}
+
+#redName{
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Widgets */
+.widgets{
+    border-radius: 25px;
+    background-color: #86BC25;
+    color: white;
+    text-align-last: center;
+    border-style: solid;
+    border-color: #B5E064;
+    border-width: 5px;
+}
+
+#noise{
+    grid-area: noise;
+}
+
+#gamePlayed{
+    grid-area: gamePlayed;
+}
+
+#goalStreak{
+    grid-area: goalStreak;
+}
+
+#goalRecord{
+    grid-area: goalRecord;
+}
+
+#busyTime{
+    grid-area: busyTime;
+}
+
+.placeholder{
+    font-size: 24px;
+    color: #86BC25;
+}
+
+/* Leaderboard */
+#leadBoard{
+    color: black;
+    background-color: #A7A8AA;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #D0D0CE;
+    grid-area: leadBoard;
+    border-radius: 25px;
+}
+
+.footer-pic{
+    margin-top: 20px; 
+    margin-right: 10%; 
+    margin-left: 10%; 
+    width: 80%;
+}

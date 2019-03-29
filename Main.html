@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Deloitte Foosball Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+        <header>
+                <img id="logo" alt="Deloitte logo" src="deloitte_black.png">
+        </header>
+   
+        <div class="outer-grid">
+            
+            <!-- Scoreboard -->
+             <div class="inner-grid">
+                <div id="timeRem" class="scoreBoard">
+                    <p>Time Remaining</p>
+                    <br>
+                    <p id="time" class="num">5:00</p>
+                 </div>
+               
+                <!-- Right Side of Scoreboard -->
+                 <div id="redTeam" class="scoreBoard">
+                    <p id= "redName">Red Team</p>
+                </div>
+
+                <div id="scoreRed" class="scores">0</div>
+               
+
+                 <!-- Left Side of Scoreboard -->
+                <div id="blueTeam" class="scoreBoard">
+                    <p id="blueName">Blue Team</p>
+                </div>
+
+                <div id="scoreBlue" class="scores">0</div>
+             </div>
+            
+           <!-- Widgets -->
+            <div id="noise" class="widgets">
+                <br>
+                <p class="placeholder">null<p>
+                </p>Noise Level</p>
+            </div>
+
+            <div id="goalStreak" class="widgets">
+                <br>
+                <p class="num">0<p>
+                </p>Goals Streak</p>
+            </div>
+            
+            <div id="goalRecord" class="widgets">
+                <br>
+                <p class="num">0<p>
+                </p>Goals in a Single Game</p>
+            </div> 
+
+            <div id="gamePlayed" class="widgets">
+                <br>
+                <p class="num">0<p>
+                </p>Games Played Today</p>
+            </div>
+
+            <div id="busyTime" class="widgets">
+                <br>
+                <p class="placeholder">null<p>
+                </p>Busiest Time of the Day</p>
+            </div>
+                
+
+            <!-- Leaderboard -->
+            <div id="leadBoard"><p>Leaderboard</p></div>
+        </div>   
+
+        <div class="footer-pic">
+            <img id="foosball-img" src="blur-foosball.jpg" width="100%">
+        </div>
+</body>
+
+</html>
