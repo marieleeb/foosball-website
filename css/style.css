@@ -1,0 +1,202 @@
+body{
+    font-family: "Verdana", "Arial", sans-serif;
+    font-size: 16px;
+    background-color: black;
+}
+
+#logo{
+    width: 100px;
+}
+
+/* Dashboard */
+.outer-grid{
+
+    display: grid;
+    display: -ms -grid;      /* For IE Compatibility */
+    
+    padding: 0px 40px 40px 40px;
+    grid-template-areas:
+   'top top top leadBoard'
+   'noise goalStreak goalRecord leadBoard'
+   'gamePlayed busyTime busyTime leadBoard';
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    
+    -ms-grid-columns: 0.5fr  0.5fr  0.5fr  0.5fr;
+    -ms-grid-rows: 0.5fr  0.5fr  0.5fr;
+    
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+    height: 70%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+p{
+    text-align: center;
+}
+
+/* Scoreboard */
+.inner-grid{
+    grid-area: top;
+    grid-row: 1; 
+    -ms-grid-row: 1; 
+    -ms-grid-column: 1; 
+    -ms-grid-column-span: 3;
+    
+    display: grid;
+    display:-ms -grid;    /* For IE Compatibility */
+
+    -ms-grid-columns: 35% 5% 20% 5% 35%;
+    -ms-grid-rows: 50% 50%;
+    
+    grid-template-areas:
+    '. . time . .'
+    'r numR time numB b';
+    grid-template-columns: 35% 5% 20% 5% 35%;
+    grid-template-rows: 50% 50%;
+}
+
+.scoreBoard{
+    background-color: #D0D0CE;  
+    font-family: "Verdana", "Geneva", sans-serif;
+    font-size: 100%;
+    color: #000000;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+
+#timeRem{
+    grid-area: time;
+    text-align: center;
+}
+
+#pTime{
+    padding-top:10%;
+}
+
+.scores{
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+.num{
+    font-size: 24px;
+    text-align: center;
+}
+
+.pScore{
+    text-align: center;
+    margin-top: -10%;
+}
+
+
+/* Left Side of Scoreboard */
+#redTeam{
+    grid-area: r;
+    margin-right: -100px;
+}
+#scoreRed{
+    grid-area: numR;
+    background-color: #DA291C;
+    border: 5px solid #FF5D51;
+    height: 70%;
+    align-self: center;
+}
+
+#pRed{
+    padding-right: 20%;
+    padding-top: 3%;
+    font-size: 150%;
+}
+
+/* Right Side of Scoreboard */
+#blueTeam{
+    grid-area: b;
+    margin-left: -100px;
+}
+#scoreBlue{
+    grid-area: numB;
+    background-color: #62B5E5;
+    border: 5px solid #A0DCFF;
+    height: 70%;
+    align-self: center;
+}
+
+#pBlue{
+   padding-left: 20%;
+   padding-top: 3%;
+   font-size: 150%;
+}
+
+
+/* Widgets */
+.widgets{
+    border-radius: 25px;
+    background-color: #86BC25;
+    color: white;
+    text-align-last: center;
+    border-style: solid;
+    border-color: #B5E064;
+    border-width: 5px;
+    font-size: 20px;
+}
+
+#noise{
+    grid-area: noise;
+    -ms-grid-row: 2; 
+    -ms-grid-column: 1;
+}
+
+#goalStreak{
+    grid-area: goalStreak;
+    -ms-grid-row: 2; 
+    -ms-grid-column: 2;
+}
+
+#goalRecord{
+    grid-area: goalRecord;
+    -ms-grid-row: 2; 
+    -ms-grid-column: 3; 
+}
+
+#gamePlayed{
+    grid-area: gamePlayed;
+    -ms-grid-row: 3; 
+    -ms-grid-column: 1;
+}
+
+#busyTime{
+    grid-area: busyTime;
+    -ms-grid-row: 3; 
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2; 
+}
+
+.placeholder{
+    font-size: 24px;
+    color: #86BC25;
+}
+
+/* Leaderboard */
+#leadBoard{
+    color: black;
+    background-color: #A7A8AA;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #D0D0CE;
+    grid-area: leadBoard;
+    border-radius: 25px;
+
+    -ms-grid-row: 1; 
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 4; 
+}
+
+.footer-pic{
+    margin-top: 20px; 
+    margin-right: 10%; 
+    margin-left: 10%; 
+    width: 80%;
+}
